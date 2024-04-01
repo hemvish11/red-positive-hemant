@@ -61,7 +61,7 @@ const Form: React.FC<propsDataType> = ({
                 const updatedData = await updatedResponse.json();
 
                 // Call the handleDataUpdate function from the parent component
-                
+
                 handleDataUpdate(updatedData);
 
                 // Optionally, you can also redirect to the root route
@@ -92,11 +92,11 @@ const Form: React.FC<propsDataType> = ({
                 <form onSubmit={handleSubmit} className='flex items-center justify-center flex-wrap'>
                     {/* <input type="text" name='uniqueId' hidden/> */}
 
-                    <input required className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.name}  name="name" placeholder="Name" />
+                    <input required className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.name} name="name" placeholder="Name" />
                     <br />
-                    <input required min={1000000000} max={9999999999} className='border-1 m-1 p-2 rounded-lg' type="number" onChange={handleChange2} value={data.phoneNumber} name="phoneNumber" placeholder="Phone Number" />
+                    <input required pattern="[1-9]{1}[0-9]{9}" className='border-1 m-1 p-2 rounded-lg' type="tel" onChange={handleChange2} value={data.phoneNumber} name="phoneNumber" placeholder="Phone Number" />
                     <br />
-                    <input required className='border-1 m-1 p-2 rounded-lg' type="email" onChange={handleChange2} value={data.email}  name="email" placeholder="Email" />
+                    <input required className='border-1 m-1 p-2 rounded-lg' type="email" onChange={handleChange2} value={data.email} name="email" placeholder="Email" />
                     <br />
                     <input required className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.hobbies} name="hobbies" placeholder="Hobbies" />
                     <br />
