@@ -6,3 +6,9 @@
 .form-checkbox {
     @apply  h-6 w-6 border border-gray-300 rounded-sm bg-white transition duration-200 cursor-pointer;
   }
+
+  body{
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
