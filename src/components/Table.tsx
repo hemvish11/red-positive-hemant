@@ -59,7 +59,7 @@ const Table: React.FC<propsDataType> = ({
 
       <table className='border-2 border-black rounded-lg shadow-lg m-5 p-5 max-w-[90%]'>
 
-        <thead >
+        <thead className='bg-slate-300'>
 
           <tr >
             <th className='border-2 border-black p-5'>Select</th>
@@ -101,13 +101,13 @@ const Table: React.FC<propsDataType> = ({
                       changeInitialValues(index)
                       setToUpdateIdx(index)
                     }}
-                    className='bg-green-600 text-white py-2 px-6 text-lg rounded-lg m-2'>Update</button>
+                    className='bg-green-600 hover:bg-green-700 text-white py-2 px-6 text-lg rounded-lg m-2'>Update</button>
                   <button
                     onClick={() => {
                       deleteElement(index)
                       handleDeleteElement(item.uniqueId)
                     }}
-                    className='bg-red-600 text-white py-2 px-6 text-lg rounded-lg'>Delete </button>
+                    className='bg-red-600 hover:bg-red-700 text-white py-2 px-6 text-lg rounded-lg'>Delete </button>
                 </label>
 
               </td>
@@ -119,10 +119,10 @@ const Table: React.FC<propsDataType> = ({
       </table>
       <div className='flex gap-3 items-center justify-center'>
 
-        <button onClick={() => handleAdd()} className='bg-blue-600 text-white py-2 px-6 text-lg rounded-lg'>Add New Data </button>
+        <button onClick={() => handleAdd()} className='bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 text-lg rounded-lg'>Add New Data </button>
         {hasSelectedRows && (
           <a href={getMailtoLink()} target="_blank" rel="noopener noreferrer"
-            className='bg-purple-600 text-white py-2 px-6 text-lg rounded-lg'
+            className='bg-purple-600 hover:bg-purple-700 text-white py-2 px-6 text-lg rounded-lg'
           >
             Send
           </a>

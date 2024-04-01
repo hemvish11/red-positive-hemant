@@ -101,7 +101,7 @@ const Form: React.FC<propsDataType> = ({
                     <input required className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.hobbies} name="hobbies" placeholder="Hobbies" />
                     <br />
                     {/* we should never use onCLick on the submit button */}
-                    <button type="submit" className='bg-green-600 text-white py-2 px-6 text-lg rounded-lg'>Save</button>
+                    <button type="submit" className='bg-green-600 hover:bg-green-700 text-white py-2 px-6 text-lg rounded-lg'>Save</button>
 
                 </form>
 
