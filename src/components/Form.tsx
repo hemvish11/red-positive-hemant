@@ -92,13 +92,13 @@ const Form: React.FC<propsDataType> = ({
                 <form onSubmit={handleSubmit} className='flex items-center justify-center flex-wrap'>
                     {/* <input type="text" name='uniqueId' hidden/> */}
 
-                    <input className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.name}  name="name" placeholder="Name" />
+                    <input required className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.name}  name="name" placeholder="Name" />
                     <br />
-                    <input className='border-1 m-1 p-2 rounded-lg' type="number" onChange={handleChange2} value={data.phoneNumber} name="phoneNumber" placeholder="Phone Number" />
+                    <input required className='border-1 m-1 p-2 rounded-lg' type="number" onChange={handleChange2} value={data.phoneNumber} name="phoneNumber" placeholder="Phone Number" />
                     <br />
-                    <input className='border-1 m-1 p-2 rounded-lg' type="email" onChange={handleChange2} value={data.email}  name="email" placeholder="Email" />
+                    <input required className='border-1 m-1 p-2 rounded-lg' type="email" onChange={handleChange2} value={data.email}  name="email" placeholder="Email" />
                     <br />
-                    <input className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.hobbies} name="hobbies" placeholder="Hobbies" />
+                    <input required className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.hobbies} name="hobbies" placeholder="Hobbies" />
                     <br />
                     {/* we should never use onCLick on the submit button */}
                     <button type="submit" className='bg-green-600 text-white py-2 px-6 text-lg rounded-lg'>Save</button>
