@@ -94,7 +94,7 @@ const Form: React.FC<propsDataType> = ({
 
                     <input required className='border-1 m-1 p-2 rounded-lg' type="text" onChange={handleChange2} value={data.name}  name="name" placeholder="Name" />
                     <br />
-                    <input required className='border-1 m-1 p-2 rounded-lg' type="number" onChange={handleChange2} value={data.phoneNumber} name="phoneNumber" placeholder="Phone Number" />
+                    <input required min={1000000000} max={9999999999} className='border-1 m-1 p-2 rounded-lg' type="number" onChange={handleChange2} value={data.phoneNumber} name="phoneNumber" placeholder="Phone Number" />
                     <br />
                     <input required className='border-1 m-1 p-2 rounded-lg' type="email" onChange={handleChange2} value={data.email}  name="email" placeholder="Email" />
                     <br />
