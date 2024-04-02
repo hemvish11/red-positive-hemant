@@ -109,7 +109,7 @@ const Table: React.FC<propsDataType> = ({
               <td className='lg:border-2 lg:border-black p-5 whitespace-pre-wrap break-words lg:max-w-36'>
 
                 <div className='flex '>
-                  <p className='lg:hidden w-1/2 lg:w-0'>Phone Number : </p>
+                  <p className='lg:hidden w-1/2 lg:w-0'>Phone No. : </p>
                   <p className='w-1/2 lg:w-full'>{item.phoneNumber}</p>
                 </div>
 
