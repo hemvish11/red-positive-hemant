@@ -55,9 +55,10 @@ const Table: React.FC<propsDataType> = ({
 
 
   return (
-    <div>
+    <div className='flex flex-col justify-center items-center'>
+    {/* <div> */}
 
-      <table className='border-2 border-black rounded-lg shadow-lg m-5 p-5 max-w-[90%]'>
+      <table className='border-2 lg:border-black rounded-lg shadow-lg m-5 p-5 w-[90%] lg:max-w-[90%]'>
 
         <thead className='bg-slate-300'>
 
@@ -77,10 +78,11 @@ const Table: React.FC<propsDataType> = ({
         <tbody >
 
           {items.map((item, index) =>
-            <tr className={`border-2 border-black rounded-lg m-5 p-5 ${isChecked[index] ? "bg-green-200" : ""}`}
+            <tr className={`border-2 border-[#777] lg:border-black rounded lg:rounded-lg m-5 lg:p-5 ${isChecked[index] ? "bg-green-200" : ""}`}
               key={index}>
-              <td className='border-2 border-black p-5'>
-                <label htmlFor={`checkbox-${index}`} className="flex items-center justify-center">
+              <td className='lg:border-2 border-[#777] lg:border-black p-5'>
+                <label htmlFor={`checkbox-${index}`} className="flex items-center justify-between lg:justify-center">
+                  <p className='lg:hidden'>Select :</p>
                   <input
                     type="checkbox"
                     checked={isChecked[index]}
@@ -88,26 +90,62 @@ const Table: React.FC<propsDataType> = ({
                     className='form-checkbox h-5 w-5 rounded' />
                 </label>
               </td>
-              <td className='border-2 border-black p-5 whitespace-pre-wrap break-words max-w-36'>{index + 1}</td>
-              <td className='border-2 border-black p-5 whitespace-pre-wrap break-words  max-w-36'>{item.name}</td>
-              <td className='border-2 border-black p-5 whitespace-pre-wrap break-words  max-w-36 '>{item.phoneNumber}</td>
-              <td className='border-2 border-black p-5 whitespace-pre-wrap break-words  max-w-96'>{item.email}</td>
-              <td className='border-2 border-black p-5 whitespace-pre-wrap break-words  max-w-36'>{item.hobbies}</td>
-              <td className='border-2 border-black p-5 whitespace-pre-wrap break-words  max-w-36'>
-                <label htmlFor="update-delete-buttons" className='flex flex-col justify-center items-center '>
+              <td className='lg:border-2 lg:border-black p-5 whitespace-pre-wrap break-words lg:max-w-36'>
+
+                <div className='flex '>
+                  <p className='lg:hidden w-1/2 lg:w-0'>ID : </p>
+                  <p className='w-1/2 lg:w-full lg:text-base'>{index + 1}</p>
+                </div>
+
+              </td>
+              <td className='lg:border-2 lg:border-black p-5 whitespace-pre-wrap break-words lg:max-w-36'>
+
+                <div className='flex '>
+                  <p className='lg:hidden w-1/2 lg:w-0'>Name : </p>
+                  <p className='w-1/2 lg:w-full'>{item.name}</p>
+                </div>
+
+              </td>
+              <td className='lg:border-2 lg:border-black p-5 whitespace-pre-wrap break-words lg:max-w-36'>
+
+                <div className='flex '>
+                  <p className='lg:hidden w-1/2 lg:w-0'>Phone Number : </p>
+                  <p className='w-1/2 lg:w-full'>{item.phoneNumber}</p>
+                </div>
+
+              </td>
+              <td className='lg:border-2 lg:border-black p-5 whitespace-pre-wrap break-words lg:max-w-96'>
+
+                <div className='flex '>
+                  <p className='lg:hidden w-1/2 lg:w-0'>Email : </p>
+                  <p className='w-1/2 lg:w-full'>{item.email}</p>
+                </div>
+
+              </td>
+              <td className='lg:border-2 border-[#777] lg:border-black p-5 whitespace-pre-wrap break-words lg:max-w-36'>
+
+                <div className='flex '>
+                  <p className='lg:hidden w-1/2 lg:w-0'>Hobbies : </p>
+                  <p className='w-1/2 lg:w-full'>{item.hobbies}</p>
+                </div>
+
+              </td>
+
+              <td className='lg:border-2 border-[#777] lg:border-black p-5 whitespace-pre-wrap break-words  lg:max-w-36'>
+                <label htmlFor="update-delete-buttons" className='flex lg:flex-col justify-center items-center gap-2'>
                   <button
                     onClick={() => {
                       setUpdateBoxOpened(!updateBoxOpened)
                       changeInitialValues(index)
                       setToUpdateIdx(index)
                     }}
-                    className='bg-green-600 hover:bg-green-700 text-white py-2 px-6 text-lg rounded-lg m-2'>Update</button>
+                    className='bg-green-600 hover:bg-green-700 text-white py-2 px-6 text-lg rounded-lg'>Update</button>
                   <button
                     onClick={() => {
                       deleteElement(index)
                       handleDeleteElement(item.uniqueId)
                     }}
-                    className='bg-red-600 hover:bg-red-700 text-white py-2 px-6 text-lg rounded-lg'>Delete </button>
+                    className='bg-red-600 hover:bg-red-700 text-white py-2 px-6 text-lg rounded-lg'>Delete</button>
                 </label>
 
               </td>
@@ -117,7 +155,7 @@ const Table: React.FC<propsDataType> = ({
 
         </tbody>
       </table>
-      <div className='flex gap-3 items-center justify-center'>
+      <div className='flex gap-3 items-center justify-center pb-5'>
 
         <button onClick={() => handleAdd()} className='bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 text-lg rounded-lg'>Add New Data </button>
         {hasSelectedRows && (

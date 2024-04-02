@@ -12,3 +12,22 @@
     background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   }
+
+  @media screen and (max-width: 1024px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        display: none;
+    }
+    
+    tr { border: 1px solid #ddd; }
+    
+    td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+}
