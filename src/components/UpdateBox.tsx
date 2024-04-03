@@ -75,13 +75,10 @@ const UpdateBox: React.FC<propsDataType> = ({
             <div id="modal" className="bg-white p-8 rounded-lg shadow-lg w-[90%] lg:w-1/2">
                 <div className="flex justify-between items-center mb-4">
 
-                    <h2 className="text-lg font-semibold">Dialog Box</h2>
+                    <h2 className="text-lg font-semibold">Update data</h2>
 
 
                 </div>
-
-
-                <p>Form</p>
 
                 <form onSubmit={handleSubmit} className='flex items-center justify-center flex-wrap'>
 
