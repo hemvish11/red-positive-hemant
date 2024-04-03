@@ -78,7 +78,7 @@ const Form: React.FC<propsDataType> = ({
         <div id="modal-bg" className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
 
 
-            <div id="modal" className="bg-white p-8 rounded-lg shadow-lg w-1/2">
+            <div id="modal" className="bg-white p-8 rounded-lg shadow-lg w-[90%] lg:w-1/2">
                 <div className="flex justify-center items-center mb-4">
 
                     <h2 className="text-lg font-semibold">Form</h2>

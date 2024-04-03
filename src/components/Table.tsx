@@ -56,7 +56,7 @@ const Table: React.FC<propsDataType> = ({
 
   return (
     <div className='flex flex-col justify-center items-center'>
-    {/* <div> */}
+      {/* <div> */}
 
       <table className='border-2 lg:border-black rounded-lg shadow-lg m-5 p-5 w-[90%] lg:max-w-[90%]'>
 
